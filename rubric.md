@@ -1,4 +1,4 @@
-## Front-End Design (10 pts)
+## Front-End Design (13 pts)
 
 _____ 2 pts: Game has a **robust, understandable text-based interface** that allows the player to control their movement through the game.  Player should be able to enter any command at any time, and if it makes sense in the current context it will be carried out.
 
@@ -12,8 +12,13 @@ _____ 1 pt: Gameplay supports **reversible moves** where reasonable (e.g., if yo
 
 _____ 1 pt: Some paths through the game have **restricted access** until the player has completed a task or acquired a specific item (i.e. a key to open a door, etc.).
 
+_____ 1 pt: Player can customize their user and different attributes and methods will be available to them based on their user type. 
 
-## Back-End Design (15 pts)
+_____ 1 pt: Player can interact with different shops and inventories (buying, selling, etc). 
+
+_____ 1 pt: Stores have workers who can interact with player to sell their product. 
+
+## Back-End Design (17 pts)
 
 _____ 2 pts: Selected classes(s) are **effective, efficient** at supporting the desired operations and program behavior.
 
@@ -32,6 +37,8 @@ _____ 1 pt: All classes override certain methods.
 _____ 1 pt: Each constructor works as expected. 
 
 _____ 2 pt: All classes implement their required attributes and methods as outlined in their requirements file. 
+
+_____ 2 pt: All attributes are appropriately encapsulated and accessors are used where appropriate. 
 
 ## General Items (10 pts):
 _____ 4 pts: Program compiles without errors or warnings.
