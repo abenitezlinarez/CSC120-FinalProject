@@ -21,7 +21,7 @@ public class User {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void addToShoppingList(String item) {

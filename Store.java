@@ -39,4 +39,11 @@ public class Store {
     public void addItem(String itemName, double price, int amount) {
        
     }
+
+    /**
+     * Prints inventory nicely (used in Employee class)
+     */
+    public void printInventory() { 
+
+    }
 }
