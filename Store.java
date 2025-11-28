@@ -5,7 +5,7 @@ public class Store {
     protected String name;
     protected Map<String, Double> items;   // all items & stock needs to be lowercase no whitespace
     protected Map<String, Integer> stock;  
-    protected int capacity;             
+    protected int capacity;      // capacity of items?        
 
     public Store(String name, int capacity) {
         this.name = name;

@@ -21,7 +21,7 @@ public class User {
         this.hasCar = hasCar;
         this.parkingSpot = -1;
         this.shoppingList = new ArrayList<>();
-        this.hunger = 0; 
+        this.hunger = hunger; 
     }
 
     public String getName() {

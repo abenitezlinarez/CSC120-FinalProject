@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * File name: Employee.java
  * Author Michelle Jiang 
@@ -5,7 +7,6 @@
  * Date: 2025-11-20
  */
 
-import java.util.Scanner; 
 
 public class Employee {
 
@@ -31,9 +32,9 @@ public class Employee {
      */
     public void mainConversation() { 
         String item = ""; 
-        while (item != "exit") {
+        //while (item != "exit") {
             System.out.println("What would you like to purchase from this store? (Type 'exit' to leave store)");
-            item = user.getInput(); 
+            item = this.getInput(); 
             if (store.checkItem(item)) { 
                 if (store.checkStock(item)) { 
                     store.buy(user, item);
@@ -41,12 +42,19 @@ public class Employee {
                     suggestItem(item);
                 }
             } else {
-                System.out.println(item + "is not in shopping list. Either add item to list or exit store. ");
+                System.out.println(item + "is not in shopping list. Either add item to list or exit store. ('add item' or press any key)");
+                String input = this.getInput(); 
+                // spaghetti code...
+                if (input == "add item") { 
+                    System.out.println("What is the item you want to add?");
+                    String userItem = this.getInput(); 
+                    user.addToShoppingList(userItem);
+                }
                 // give option to add item to list and if no then choose to exit store? 
             }
-        } 
-        System.out.println("Goodbye! ");
-        store.exit(user);
+        //} 
+        //System.out.println("Goodbye! ");
+        //store.exit(user);
     }
 
     /** 
@@ -58,7 +66,24 @@ public class Employee {
         // adds item to shopping list!
     }
 
+    /**
+     * Gets input from user & converts it to a string
+     * @return string formatted user input 
+     */
+    public String getInput() { 
+        Scanner input = new Scanner(System.in);  
+        input.close();
+        String string = input.toString();
+        string = string.trim(); 
+        string = string.toLowerCase(); 
+        return string; 
+    }
+    
     public static void main(String[] args) {
-        System.out.println("Hello, Employee!");
+        Store store = new Store("Store", 10);
+        User user = new User("Michelle", 19, "female", 1000, false, 0);
+        Employee employee = new Employee(store, user); 
+        employee.greetCustomer();
+        employee.mainConversation();
     }
 }
