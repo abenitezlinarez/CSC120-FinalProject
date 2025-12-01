@@ -22,6 +22,15 @@ public class User {
         this.parkingSpot = -1;
         this.shoppingList = new ArrayList<>();
         this.hunger = hunger; 
+        System.out.println("Welcome, " + name + "! We are so glad to welcome you!");
+        if (hasCar) {
+            System.out.println("I see you have a car with you today. Go ahead and park it in any available spot!");
+        } else {
+            System.out.println("I see you do not have a car with you today. Feel free to walk right in!");
+        }
+        System.out.println("I see you have $" + money + " to spend today.");
+        System.out.println("I see your age is " + age + " and your gender is " + gender + ".");
+        //System.out.println("Based on this I would recommend " + this.viewShoppingList() + " for your shopping list today.");
     }
 
     public String getName() {
@@ -50,19 +59,21 @@ public class User {
     }
 
     public void viewShoppingList() {
-        
+        System.out.println(this.shoppingList);
     }
 
     public void enterTheMall() {
-
+        System.out.println("Welcome to the mall " + name + "! Enjoy your shopping experience!");
     }
 
     public void leaveTheMall() { 
+        System.out.println("You have exited the mall! Unfortunately, the mall is huge! You've lost hunger :( Your hunger level is now: " + (this.hunger + 1));
 
     }
 
     public void park(int spotNumber) { 
-
+        System.out.println("Congratulations! You've found parking! Parking at spot number: " + spotNumber);
+        System.out.println("Unfortunately it's a long walk to the mall, so you will be more hungry. Your new hunger is" + (this.hunger + 1));
     }
 
     public void shop(double price) { 

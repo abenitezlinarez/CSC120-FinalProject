@@ -26,9 +26,9 @@ From the flowchart:
 - can purchase or not purchase --> if they don't purchase leaving is harder...unskippable cutscene
 
 # Person 3: Aris
-- intro stuff
+- intro stuff (Done ish)
 - win and lose conditions
-- parking
+- parking (Started)
 - list of commands in the beginning so they can keep track of their actions
 - money
 
