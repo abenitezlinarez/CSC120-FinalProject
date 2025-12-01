@@ -47,6 +47,10 @@ public class Store {
 
     }
 
+    public void getInventory(){
+        
+    }
+
     /**
      * Checks if item is in shopping list
      * @return true if item in list false otherwise
