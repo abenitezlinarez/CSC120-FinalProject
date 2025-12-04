@@ -77,9 +77,6 @@ public class User {
 
     }
 
-    public void useBathroom() { 
-
-    }
 
     public void eat(Food food) { 
         food.dine(this.hunger, this.money);
